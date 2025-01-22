@@ -5,17 +5,19 @@ import { messagesRouter } from "./routes/messages.js";
 
 const app = express();
 
-const allowedOrigins = ["https://anota-fron-end.vercel.app/"];
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: ["https://anota-fron-end.vercel.app/"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "X-Requested-With",
+      "Accept",
+      "Origin",
+      "Access-Control-Allow-Headers",
+    ],
+    exposedHeaders: ["Content-Length", "X-Kuma-Revision"],
     credentials: true,
   })
 );
