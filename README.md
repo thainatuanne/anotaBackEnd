@@ -15,11 +15,11 @@
 ## 🛠️ Tecnologias Utilizadas
 
 - **Node.js**: Ambiente de execução JavaScript.
-- **Express.js**: Framework web para criação de APIs REST.
+- **Express.js**: Criação de APIs REST.
 - **UUID**: Geração de identificadores únicos.
 - **Bcrypt**: Hashing de senhas para segurança.
 - **Cors**: Permissão de requisições de diferentes origens.
-- **Axios**: Integração entre frontend e backend (recomenda-se para testes e chamadas externas).
+- **Axios**: Integração entre frontend e backend.
 
   
 ## 📄 Endpoints da API
