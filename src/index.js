@@ -4,7 +4,16 @@ import { usersRouter } from "./routes/users.js";
 import { messagesRouter } from "./routes/messages.js";
 
 const app = express();
-app.use(cors());
+
+const allowedOrigins = ["https://anota-fron-end.vercel.app"];
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 const port = process.env.PORT || 8080;
