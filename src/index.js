@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://anota-fron-end.vercel.app",
+    origin: "https://anota-fron-end.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: [
       "Content-Type",
@@ -16,9 +16,12 @@ app.use(
       "Accept",
       "Origin",
     ],
+    exposedHeaders: ["Content-Length", "X-Kuma-Revision"],
     credentials: true,
   })
 );
+
+app.options("*", cors());
 
 app.use(express.json());
 
