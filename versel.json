@@ -11,11 +11,5 @@
       "src": "/(.*)",
       "dest": "src/index.js"
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "https://anota-back-end.vercel.app/$1"
-    }
   ]
 }
