@@ -5,7 +5,7 @@ import { messagesRouter } from "./routes/messages.js";
 
 const app = express();
 
-const allowedOrigins = ["https://anota-fron-end.vercel.app"];
+const allowedOrigins = ["https://anota-fron-end.vercel.app/"];
 app.use(
   cors({
     origin: allowedOrigins,
